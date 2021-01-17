@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import ApiEndPoint from '../api-end-point';
 import {Post} from '../model/post';
+import {User} from '../model/user';
 
 @Injectable({
   providedIn: 'root'
@@ -15,5 +16,9 @@ export class PostService {
     return this.httpClient.get<Post[]>(`${ApiEndPoint.baseURL}/posts`, {
       params: { status }
     });
+  }
+
+  getUsers(): Observable<User[]> {
+    return this.httpClient.get<User[]>(`${ApiEndPoint.baseURL}/users`);
   }
 }
