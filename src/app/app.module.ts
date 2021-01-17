@@ -8,6 +8,8 @@ import { HighlightDirective } from './highlight.directive';
 import { FormExamComponent } from './form-exam/form-exam.component';
 import { FormEditorComponent } from './form-editor/form-editor.component';
 import { MyformComponent } from './myform/myform.component';
+import { PostComponent } from './post/post.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { MyformComponent } from './myform/myform.component';
     HighlightDirective,
     FormExamComponent,
     FormEditorComponent,
-    MyformComponent
+    MyformComponent,
+    PostComponent
   ],
     imports: [
         BrowserModule,
+        HttpClientModule,
         AppRoutingModule,
         FormsModule,
         ReactiveFormsModule
